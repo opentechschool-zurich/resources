@@ -42,13 +42,13 @@ FractionItem operator"" _fr ( unsigned long long n )
         return FractionItem(n);
 }
 
-
 int main()
 {
     std::cout << Fraction{3, 4} + Fraction{2, 3} << std::endl;
     std::cout << Fraction{1, 2} + Fraction{3, 5} << std::endl;
     std::cout << Fraction{1, 2} - Fraction{1, 4} << std::endl;
     assert((Fraction{1, 2} - Fraction{1, 4}) == (Fraction{2, 8}));
+
     std::cout << (3_fr / 4_fr) + (2_fr / 3_fr)  << std::endl;
     std::cout << (1_fr / 2_fr) + (3_fr / 5_fr)  << std::endl;
     std::cout << (1_fr / 2_fr) - (1_fr / 4_fr)  << std::endl;
