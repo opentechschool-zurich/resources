@@ -1,4 +1,7 @@
 #include <iostream>
+/**
+ * sum of digits for number between 1 and 999
+ */
 int main()
 {
     int zahl{124};

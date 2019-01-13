@@ -52,6 +52,148 @@ Using lists will improve the quality of your "product" and of your code, but is 
 
 For those who have not seen loops and branching/conditionals yet, you assume that the number is between 1 and 999.
 
+## Fraction calculator
+
+```
+1/2 + 2/3 = 7/6
+```
+
+## Vertical sum
+
+```
+ 123 +
+ 567 =
+ -----
+ 790
+
+
+ 999 +
+   1 =
+------
+1000
+```
+
+## Dashed names to camel case
+
+```
+this_is_my_variable -> thisIsMyVariable
+join_the_party() -> joinTheParty()
+```
+
+## Encryption even first, odd last
+
+You have string, create a new string with the even characters at the front and the odd ones at the end.
+
+```
+ThisIsMyString -> hssytigTiIMSrn
+```
+
+Each encryption and decription process repeat the process n times.
+
+## Remove all vowels from a string
+
+```
+my bases are belong to you --> my bss r blng t y
+```
+
+## Left and right sum
+
+In a list of integers, find the index where the sum of numbers on the left is equal to the sum of the numbers on the right.
+
+```
+{1,2,3,4,3,2,1} --> 3
+```
+
+## Random string
+
+Create random strings of length between a and b (as an example between 2 and 10), with all alphanumeric characters.
+
+Can you test that it works correctly?
+
+## Next perfect square
+
+Given a number, find the next number that has an integer square root.
+
+```
+121 --> 144
+625 --> 676
+114 --> -1
+```
+
+## Find the peaks
+
+Find the local peaks in a list of integers.
+
+- Return the postition and the value.
+- Peaks cannot be at the beginning or at the end of the list.
+- If there is a pleatau, return the first item in the plateau.
+
+```
+{0, 1, 2, 5, 1, 0} --> {{3, 5}}
+{3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3} --> {{3, 6}, {7, 3}};
+{1, 2, 2, 2, 1} --> {{1, 2}};
+{1, 2, 2, 2, 3} -->  {}
+```
+
+## Find the word with the highest ASCII value
+
+In a lowercase string find the word with the highest ASCII value.
+
+The ASCII value of a word is the sum of the ASCII values of its characters.
+
+```
+this is my sentence
+```
+
+## Giving change
+
+You have a queue of people who pay with 25, 50 and 100 bills.
+
+At the beginning the _cash register_ is empty and you have to deal with the queue in the order.
+
+## Is a number a prime one?
+
+A prime number (or a prime) is a natural number greater than 1 that cannot be formed by multiplying two smaller natural numbers ([Wikipedia](https://en.wikipedia..org/wiki/Prime_number)).
+
+## Validate a credit card number
+
+A credit card number is valid if a specific sum of its digits is a multiple of 10.
+
+The sum is accomplished by:
+
+- sum each digit in the number
+- each second digit from the end of the number, starting from the second one msut be doubled (if you start from the left, you doubled each even digit if the number has an even umber of digits).
+- if the doubled digit is grater than 9, summ its digits (or -9 which has the same result)
+
+It's the [Luhn Algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
+
+## Recursive sum of digits
+
+Recursively sum the digits of a positive integers until the result is a single digit:
+
+```
+195 -> 6
+```
+
+## Is a string included in another one?
+
+Does a string contain all the letter from a second string? Even if not in the right order?
+
+```
+f("rkqodlw", "world") == true
+```
+
+## Pig Latin
+
+For each word in a sentence, move the first letter to the end of the word and add "ay".
+
+Leave punctuation alone.
+
+```
+Pig latin is cool --> igPay atinlay siay oolcay
+Hello world ! --> elloHay orldway !
+```
+
 ## Find the distance between two places
 
 - places:
