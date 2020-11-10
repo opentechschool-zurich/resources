@@ -337,7 +337,7 @@ Does it not look very similar to what we had at the begginning?
 then we have something that is very similar to a typical list view builder!
 
 
-```
+```dart
 // irgendo in flutter definiert!
 void builder ({int itemCount, var itemBuilder}) {
   print('hoi $itemCount ${itemBuilder('clonetext', 5)}');
@@ -355,6 +355,7 @@ void main() {
       return i * 2;
     });
 }
+```
 
 Output:
 
