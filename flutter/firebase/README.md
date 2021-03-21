@@ -158,6 +158,8 @@ void _incrementCounter() {
 
 ### Streams and having multiple users updating the same value
 
+This second example shows how to get a counter that is _dynamically_ updated: if the value in Firebase changes, the UI will be notified and updated.
+
 If you halready did the asynchronous Counter, you should probably startagain from a _clean_ `main.dart`.
 
 The initialisation is the same as for the asynchronous example. Add the Firestore packages...
