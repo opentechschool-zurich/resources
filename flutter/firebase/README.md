@@ -60,7 +60,7 @@ In _Cloud Firestore_ web interface
 - Initialize flutterfire in the App
   - https://firebase.flutter.dev/docs/overview/#initializing-flutterfire
 
-### Using an almost synchronous approach
+### Using a mostly synchronous approach
 
 Our first approach will be, to simply get the current value from Firebase when the App starts.
 
@@ -156,7 +156,7 @@ void _incrementCounter() {
 
 [Here](01-syncronous/main.dart) you can get the complete [`main.dart`](01-syncronous/main.dart).
 
-### Streams and having multiple Users updating the same value
+### Streams and having multiple users updating the same value
 
 If you halready did the asynchronous Counter, you should probably startagain from a _clean_ `main.dart`.
 
@@ -189,7 +189,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   ...
 ```
-
 
 Then, modify `_MyHomPageState`'s `build` to use the stream:
 
@@ -323,15 +322,6 @@ The biggest difference with the previous asyncronous example is that now we don'
 
 [Here](02-reference/main.dart) you can get the complete [`main.dart`](02-reference/main.dart).
 
-
-- [Cloud Firestore > Realtime changes](https://firebase.flutter.dev/docs/firestore/usage/#realtime-changes)
-- [Flutter Main Example with StreamBuilder](https://gist.github.com/ffeu/e77664dd322089649d9b6f0f8fb04d42)
-- [Firebase Tutorial for Flutter: Getting Started](https://www.raywenderlich.com/7426050-firebase-tutorial-for-flutter-getting-started).
-  - Creating a DataRepository Class
-  - Using Streams (without the model)
-- <https://github.com/HathTech/flutter-firebase-tutorials/blob/master/lib/home.dart>
-
-
 ### Using a model
 
 - "Creating the model classes" in [Firebase Tutorial for Flutter: Getting Started](https://www.raywenderlich.com/7426050-firebase-tutorial-for-flutter-getting-started).
@@ -343,6 +333,10 @@ The biggest difference with the previous asyncronous example is that now we don'
 ## Sources
 
 - How to include and initialize (it's for firebase instead of firestore... but it's similar enough): [How to use Firebase realtime database with Flutter](https://medium.com/firebase-tips-tricks/how-to-use-firebase-realtime-database-with-flutter-ebd98aba2c91)
+- [Cloud Firestore > Realtime changes](https://firebase.flutter.dev/docs/firestore/usage/#realtime-changes)
+- [Firebase Tutorial for Flutter: Getting Started](https://www.raywenderlich.com/7426050-firebase-tutorial-for-flutter-getting-started).
+  - Creating a DataRepository Class
+  - Using Streams (without the model)
 
 - https://firebase.google.com/docs/flutter/setup?platform=android
 - https://www.raywenderlich.com/7426050
