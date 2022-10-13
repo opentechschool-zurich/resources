@@ -36,7 +36,7 @@ pandoc introduction-to-git.md -o introduction-to-git.html
     installing `wkhtmltopdf` allows to run:
 
     ```
-    pandoc introduction-to-git.html -f gfm -t html5 -o introduction-to-git.pdf --highlight-style pygments --css=md-to-html.css --pdf-engine-opt=--enable-local-file-access
+    pandoc render/introduction-to-git.html -f gfm -t html5 -o introduction-to-git.pdf --highlight-style pygments --css=md-to-html.css --pdf-engine-opt=--enable-local-file-access
     ```
 
     which gives an ok result.

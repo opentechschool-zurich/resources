@@ -34,6 +34,7 @@ The course is composed of two modules of two hours:
 - [An exercise: adding code to your repository](#an-exercise-adding-code-to-your-repository)
 - [Bits and bytes](#bits-and-bytes)
   - [The `README.md` file](#the-readmemd-file)
+  - [Save vs. commit](#save-vs-commit)
   - [`.gitignore`](#gitignore)
   - [Managing the dependencies](#managing-the-dependencies)
 - [Notes](#notes)
