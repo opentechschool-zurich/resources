@@ -98,14 +98,13 @@ If it's not the case, <https://git-scm.com/download/mac> lists a few ways for in
 
 Git is a command line tool that runs in the terminal.
 
-Sometimes there is no way around using the terminal to access the full power of Git, but most people use a Gui for Git during their daily coding work.
+Sometimes there is no way around using the terminal to access the full power of Git, but most people use a GUI for Git during their daily coding work.
 
-In this tutorial, we will be using Visual Studio Code and it built in Git features (most IDEs will work in a similar way: you're welcome your preferred editor, if you think you can follow the tutorial with it).
+In this tutorial, we will be using Visual Studio Code and its built in Git features (most IDEs will work in a similar way: you're welcome to use your preferred editor, if you think you can follow the tutorial with it).
 
-In _File > Preferences_ (or _Code > Preferences_ on a Mac): type _Git enabled_ and make sure that 
+In _File > Preferences_ (or _Code > Preferences_ on a Mac): type _Git enabled_ and make sure that the Git is enabled:
 
-[Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
-- [How do I use Bash on Windows from the Visual Studio Code integrated terminal?](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal)
+[<img src="assets/vscode-git-enabled.png" style="max-width:300px" />](assets/vscode-git-enabled.png)  
 
 ### Set up the Git environment
 
@@ -122,16 +121,12 @@ Two remarks:
 - The email address should match the address you will be using to register for the Git services (Github, Gitlab, ...).  
 If you don't want it to be publicly exposed, the Git services might provide anonymous addresses: in this case, you will need to change the value of `user.email` before doing any commit that will be published in that service.
 
-- [Github: Setting your commit email address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address)
-
-Set up the ssh keys: 
-[Setting up GitLab Key](https://courses.cs.washington.edu/courses/cse154/21su/resources/assets/vscode-git-tutorial/macosx/index.html#settingupgitlabkey)
-
 ## Some basic concepts
 
 - When you track a project with Git, all the information for the revision control is stored in a the hidden folder `.git` that Git creates at the root of your project.
 - You don't need any external service or the internet to use Git: all the revision information about your project is stored on each computer that has a copy of it.
 - You will often hear that Git is not Github. Even if Git can indeed work without a central server, it's very likely that you will want to use a service (like Github or Gitlab) to share the Code among Computers and / or users.
+- Git has been created by Linus Torvalds for managing the Linux source code. And the Linux code is managed without any web based platform: patches are exchanged through mails sent to the kernel mailing list.
 
 ## Create a new project and track it with Git
 
@@ -181,19 +176,19 @@ ale:~/Code$ cd simple-calculator
 ale:~/Code/simple-calulator$ echo "# Simple Calculator\n\nThis is a very simple calculator" > README.md
 ale:~/Code/simple-calulator$ git init
 ale:~/Code/simple-calulator$ git add README.md
-ale:~/Code/simple-calulator$ git commit "Initial commit"
+ale:~/Code/simple-calulator$ git commit -m "Initial commit"
 ```
 
-You're welcome to dive into it and try the commands out! But no need to fall in dispair, if you don't understand everything.
+You're welcome to dive into it and try out the commands! But no need to fall in dispair, if you don't understand everything.
 
-Honestly, for your first steps and for your daily programming, you're probably better off with a GUI. But the few times you need to do some _magic_ it's likely that you will need to fall back on the terminal.
+Honestly, for your first steps and for your daily programming, you're probably better off with a GUI. But the few times you need to do some _magic_, it's likely that you will need to fall back on the terminal.
 
 > ### Git can be hard... but it won't let you down
 >
-> Git is a complex Revision Control System and it's very likely that there will be a solution each time you have broken _everything_.  
+> Git is a complex Revision Control System and it's very likely that there will be a solution each time you have broken it.
 > But there are good chances that you will have to type some _black magic_ in the terminal.  
-> Don't be shy of searching the internet for solutions, but make sure that you understand what the command you type in is supposed to do!  
-> And if you're not 100% sure of what could happen, you might want do a backup of your project (including the `.git` hidden folder)
+> Don't be shy of searching the internet for solutions, but make sure that you understand what the command you type is supposed to do!  
+> And if you're not 100% sure of what could happen, you might want do a backup of your project (including the `.git` hidden folder) before running the command.
 
 ### Using Git for existing projects
 
@@ -205,9 +200,21 @@ Of course, you can also use Git for projects that you have already started: just
 
 Even more important, one of the main goals of Git is to allow you to participate to existing projects.  
 In the second module of this tutorial, you will learn how to pull the existing code of a project that is versioned with Git and how to contribute back your changes.  
-If a specific project does not use Git but another Version Control System (like [SVN, Mercurial, or Fossil](https://en.wikipedia.org/wiki/List_of_version-control_software)) it's likely that the basic concepts will be similar to the ones you're learning in this tutorial.
+If a specific project does not use Git but another Version Control System (like [SVN, Mercurial, or Fossil](https://en.wikipedia.org/wiki/List_of_version-control_software)) it's likely that the basic concepts will be similar to the ones you're learning in this tutorial. In such cases, don't insist in using Git, just use what the projet is using.
 
 ## An exercise: adding code to your repository
+
+- In your project create a folder for the code. You can name it `src`, `source`, `code`, but the best one is probably the name of the project, in our case `simple-calculator`.
+- In the new folder, add the main file for your code (`main.py`, `main.dart`, `main.cpp`, `index.js`, `index.php`, ...) and add some code in it to do a calculation (something like `print(2 + 3)`).
+- With the _Source Control_ left panel, add the file to your repository and commit the changes (press on the __A__ next to the file name, write a commit message, and press on the _Commit_ button).
+- In group of two, look at each other other code and give a next task to the other person.
+- When you have completed the task the other person gave you, commit the changes.
+
+> ### The commit history
+>
+> In the _Explorer_ pane, you can open the _TIMELINE_ section and you will see the history (log) of your commits.
+>
+> You can click on each commit and see the changes it contains.
 
 ## Bits and bytes
 
@@ -222,6 +229,15 @@ You might also want to put in there some notes about the choices you made (which
 You might want to add further `README.md` files in other folders of your project. As an example you could create one in the `assets/` folder and list there the links and license text for the assets you are using.
 
 Some Git tool (like the Github and Gitlab websites) will show you the content of the `README.md` file, when you get into the project or the folder.
+
+### Save vs. commit
+
+Why do you need to commit a file, when you already have saved it? What's the difference?
+
+When you're writing a program, you need to save your code before you can run and test it.  
+There are good chances that the code will now work or not work as you expected. You will then modify and save it again until you're happy with it.
+
+When you're task is completed, you've made a step in your code, you can commit your changes: the golden rule is to only commit code that works correctly and to commit as soon as it works (in the real world, we're often a bit lazy and people _sometimes_ commit multiple changes at once...).
 
 ### `.gitignore`
 
@@ -245,3 +261,9 @@ This tutorial is based on:
 
 - http://opentechschool.github.io/social-coding/
 - https://github.com/git-guides/git-init
+
+Some useful links:
+
+- [Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
+- [How do I use Bash on Windows from the Visual Studio Code integrated terminal?](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal)
+- [Github: Setting your commit email address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address)
