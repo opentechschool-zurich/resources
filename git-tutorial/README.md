@@ -23,20 +23,5 @@ pandoc introduction-to-git.md -o introduction-to-git.html
 ```
 
 - The markdown to pdf vscode extension did not produce any result
-- Pandoc to pdf cannot process html tags (img)
-  - adding this header at the to of the markdown file allows the code to be reflowed
-    ```yaml
-    ---
-    header-includes:
-    - \usepackage{fvextra}
-    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-    ---
-    ```
-
-    installing `wkhtmltopdf` allows to run:
-
-    ```
-    pandoc render/introduction-to-git.html -f gfm -t html5 -o introduction-to-git.pdf --highlight-style pygments --css=md-to-html.css --pdf-engine-opt=--enable-local-file-access
-    ```
-
-    which gives an ok result.
+- Pandoc to pdf cannot process html tags (img).
+- using pandoc to first converting the md file to html and then with the wkhtmltopdf engine it converts to a proper pdf.
