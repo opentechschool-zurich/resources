@@ -3,7 +3,7 @@
 
 import itertools
 
-abcd = [
+permutations = [
      'ABCD',
      'CABD',
      'ACDB',
@@ -29,12 +29,31 @@ abcd = [
      'DCAB',
 ]
 
-# solution with itertools
-abcd_set = set(abcd)
+all_permutations = [''.join(l) for l in itertools.permutations(['A', 'B', 'C', 'D'])]
+
+# 1. solution with all permutations (itertools)
+for p in all_permutations:
+   if not p in permutations: 
+        print(p)
+        break;
+
+# 2. solution with all permutations (itertools) and sets
+abcd_set = set(permutations)
 all_abcd_set = set(''.join(item) for item in itertools.permutations(['A', 'B', 'C', 'D']))
 print(all_abcd_set.difference(abcd_set))
 
-# solution without itertools
+# 3. solutions with all permutations, but without in (double for loop)
+for p in all_permutations:
+    found = False
+    for pp in permutations:
+        if p == pp:
+            found = True
+            break
+    if not found:
+        print(p)
+        break;
+
+# 4. solution without all permutations
 solution = ''
 for i in range(4):
     abcd_dic = {
@@ -44,8 +63,11 @@ for i in range(4):
         'D': 0,
     }
  
-    for item in abcd:
+    for item in permutations:
         abcd_dic[item[i]] += 1
 
     solution += min(abcd_dic, key=abcd_dic.get)
 print(solution)
+
+
+
