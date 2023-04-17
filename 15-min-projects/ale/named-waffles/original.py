@@ -4,7 +4,7 @@
 
 import itertools
 
-programmers = ['Dennis', 'Aaron', 'Donald', 'Tim', 'Bjarne', 'Linus', 'Guido', 'James', 'Richard', 'Brian', 'Grace', 'Alan', 'Niklaus', 'Guy', 'Fabrice', 'Donald', 'Ken', 'John', 'Eric', 'Anders', 'Alexander', 'Charles', 'Alan', 'Ronald', 'Andrew', 'Leslie', 'Edsger', 'John', 'Keith', 'Barbara']
+programmers = [p.lower() for p in ['Dennis', 'Aaron', 'Donald', 'Tim', 'Bjarne', 'Linus', 'Guido', 'James', 'Richard', 'Brian', 'Grace', 'Alan', 'Niklaus', 'Guy', 'Fabrice', 'Donald', 'Ken', 'John', 'Eric', 'Anders', 'Alexander', 'Charles', 'Alan', 'Ronald', 'Andrew', 'Leslie', 'Edsger', 'John', 'Keith', 'Barbara']]
 
 
 def get_number_of_waffles(permutation):
@@ -14,7 +14,6 @@ def get_number_of_waffles(permutation):
         for letter in programmer:
             if letter in letters_used:
                 if letters_used[letter] == 6:
-                    print('.', waffle_counter, permutation)
                     return waffle_counter
                 letters_used[letter] += 1
             else:
@@ -37,6 +36,3 @@ for permutation in itertools.permutations(programmers):
         max_waffles = waffles_number
 
 print(max_waffles, best_queue)
-
-                
-    

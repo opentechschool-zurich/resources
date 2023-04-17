@@ -2,7 +2,7 @@ from random import shuffle
 
 from random import shuffle
 
-programmers = ['Dennis', 'Aaron', 'Donald', 'Tim', 'Bjarne', 'Linus', 'Guido', 'James', 'Richard', 'Brian', 'Grace', 'Alan', 'Niklaus', 'Guy', 'Fabrice', 'Donald', 'Ken', 'John', 'Eric', 'Anders', 'Alexander', 'Charles', 'Alan', 'Ronald', 'Andrew', 'Leslie', 'Edsger', 'John', 'Keith', 'Barbara']
+programmers = [p.lower() for p in ['Dennis', 'Aaron', 'Donald', 'Tim', 'Bjarne', 'Linus', 'Guido', 'James', 'Richard', 'Brian', 'Grace', 'Alan', 'Niklaus', 'Guy', 'Fabrice', 'Donald', 'Ken', 'John', 'Eric', 'Anders', 'Alexander', 'Charles', 'Alan', 'Ronald', 'Andrew', 'Leslie', 'Edsger', 'John', 'Keith', 'Barbara']]
 
 
 def get_number_of_waffles(permutation):
@@ -24,9 +24,6 @@ def get_number_of_waffles(permutation):
 best_queue = []
 max_waffles = 0
 
-# itertools.permutations() creates an iterator and not a list:
-# trying to create a list would probably use all the RAM available in the whole world...
-# (you're welcome to check if this is true or not...)
 while True:
     shuffle(programmers)
     waffles_number = get_number_of_waffles(programmers)
@@ -34,4 +31,3 @@ while True:
         best_queue = programmers
         max_waffles = waffles_number
         print(max_waffles, best_queue)
-
