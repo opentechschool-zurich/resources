@@ -50,7 +50,7 @@ class Move(Enum):
 
   @staticmethod
   def random() -> Self:
-    return choice((Move.rock, Move.paper, Move.scissor))
+    return choice(list(Move))
  
 def main():
   print('R, P, S?')
