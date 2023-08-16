@@ -44,7 +44,7 @@ for letter, lines in letters.items():
 def display(word, letters):
     for i in range(7):
         for c in word:
-            print(''.join(letters[c][i]), end = ' ')
+            print(''.join(letters[c.lower()][i]), end = ' '
         print()
 
 display('chaos', letters)
