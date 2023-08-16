@@ -10,7 +10,7 @@ l4 = [4 * '*', ' ']
 
 letters['a'] = [c3, *2 * [lr], fl, *3 * [lr]]
 letters['b'] = [l4, *2 * [lr], l4, *2 * [lr], l4]
-letters['c'] = [c3, *5 * [l], c3]
+letters['c'] = [c3, lr, *3 * [l], lr, c3]
 letters['d'] = [l4, *5 * [lr], l4]
 letters['e'] = [fl, *2 * [l], l4, *2 * [l], fl]
 letters['f'] = [fl, *2 * [l], l4, *3 * [l]]
