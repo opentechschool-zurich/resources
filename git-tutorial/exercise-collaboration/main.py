@@ -5,5 +5,6 @@ def calculate(a, op, b):
 
 def main():
     assert calculate(3, '+', 2) == 5
+
 if __name__ == '__main__':
     main()
